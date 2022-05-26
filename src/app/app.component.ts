@@ -8,6 +8,7 @@ import { catchError, map, startWith } from 'rxjs/operators';
 import { Status } from './enum/status.enum';
 import { NgForm } from '@angular/forms';
 import { Server } from './interface/server';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-root',
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private serverService: ServerService,
+    private toastService: NgToastService
   ) {}
 
   ngOnInit(): void {
